@@ -7,7 +7,7 @@ class VideoGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final img = [
+    const img = [
               "assets/1.jpg",
               "assets/2.jpg",
               "assets/3.jpg",
@@ -30,7 +30,7 @@ class VideoGrid extends StatelessWidget {
         childAspectRatio: 9 / 16,
       ),
 
-      itemCount: 6,
+      itemCount: img.length,
 
       itemBuilder: (context, index) {
 

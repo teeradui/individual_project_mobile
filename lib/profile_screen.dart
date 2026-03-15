@@ -95,56 +95,58 @@ class ProfileScreen extends StatelessWidget {
         children: [
           // SIDEBAR
           Container(
-  width: 240,
-  color: Colors.white,
-  padding: const EdgeInsets.only(top: 20),
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
+            width: 240,
+            color: Colors.white,
+            padding: const EdgeInsets.only(top: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 10,
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/tiktok_logo.png",
+                        width: 28,
+                        height: 28,
+                      ),
 
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        child: Row(
-          children: [
-            Image.asset(
-              "assets/tiktok_logo.png",
-              width: 28,
-              height: 28,
+                      const SizedBox(width: 8),
+
+                      const Text(
+                        "TikTok",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+
+                const SidebarItem(Icons.home_filled, "For You"),
+                const SidebarItem(Icons.explore, "Explore"),
+                const SidebarItem(Icons.adjust, "Following"),
+                const SidebarItem(Icons.people_outline, "Friends"),
+                const SidebarItem(Icons.live_tv_outlined, "LIVE"),
+                const SidebarItem(Icons.send_outlined, "Messages"),
+                const SidebarItem(Icons.notifications, "Activity"),
+                const SidebarItem(Icons.upload, "Upload"),
+                const SidebarItem(Icons.person, "Profile", active: true),
+                const SidebarItem(Icons.more_horiz, "More"),
+              ],
             ),
-
-            const SizedBox(width: 8),
-
-            const Text(
-              "TikTok",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
-
-      const SizedBox(height: 20),
-
-      const SidebarItem(Icons.home_filled, "For You"),
-      const SidebarItem(Icons.explore, "Explore"),
-      const SidebarItem(Icons.adjust, "Following"),
-      const SidebarItem(Icons.people_outline, "Friends"),
-      const SidebarItem(Icons.live_tv_outlined, "LIVE"),
-      const SidebarItem(Icons.send_outlined, "Messages"),
-      const SidebarItem(Icons.notifications, "Activity"),
-      const SidebarItem(Icons.upload, "Upload"),
-      const SidebarItem(Icons.person, "Profile", active: true),
-      const SidebarItem(Icons.more_horiz, "More"),
-    ],
-  ),
-),
+          ),
 
           Expanded(
             child: SingleChildScrollView(
               child: Center(
-                child: Container(
+                child: SizedBox(
                   width: 1100,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
